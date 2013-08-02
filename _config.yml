@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://blog.teracy.com
-title: Official Teracy's Blog
+title: Teracy's Official Blog
 subtitle: Get experience shared!
 author: Teracy
 simple_search: http://google.com/search
-description: Official Teracy's Blog to share development experience
+description: Teracy's official blog to share our development experience
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
