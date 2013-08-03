@@ -12,7 +12,6 @@ before_script:
 - rake setup_github_pages[$REPO_URL]
 script: bundle exec rake generate
 after_script:
-- git branch --set-upstream-to=origin/master master
 - bundle exec rake deploy
 env:
     global:
