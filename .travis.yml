@@ -1,5 +1,17 @@
+---
+branches:
+    only:
+    - source
 language: ruby
 rvm:
   - 2.0.0
   - 1.9.3
+before_script:
+- export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+- rake setup_github_pages[$REPO_URL]
 script: bundle exec rake install; bundle exec rake generate
+after_script: rake deploy
+env:
+    global:
+    - GH_REPO="teracy-official/teracy-official.github.com"
+    - secure: "f+g8tyvZYOYm+jUARCD5qLNMFkslYu26PwAFe8s4VzngJ2iv37T0yj5d8R40/cLIQ6LX+nHAltuJeNK786qjtiIuKuvHAypL0/3ZgVSN9XZAKnVvwh7fz7W7bETrJDkyk1WVSTini37CLSIdDS8lBg4iKHAhSuD35FZviuf/CbY="
