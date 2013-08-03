@@ -313,7 +313,7 @@ task :setup_github_pages, :repo do |t, args|
   end
   protocol = (repo_url.match(/(^git)@/).nil?) ? 'https' : 'git'
   if protocol == 'git'
-    user = repo_url.match(/:([^\/]+)/)[1]
+    user = repo_url.match(/[\/:]([^\/]+)\/[^\/]+$/)[1]
   else
     user = repo_url.match(/github\.com\/([^\/]+)/)[1]
   end
